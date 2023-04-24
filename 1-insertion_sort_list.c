@@ -6,16 +6,16 @@
 void insertion_sort_list(listint_t **list)
 {
 listint_t *aux;
-listint_t *aux2 = *list;
+listint_t *auxOther = *list;
 listint_t *i = *list;
 
-if  (aux2 == NULL)
+if  (auxOther == NULL)
 return;
-aux2 = aux2->next;
-while (aux2 !=NULL)
+auxOther = auxOther->next;
+while (auxOther !=NULL)
 {
-i = aux2;
-aux2 = aux2->next;
+i = auxOther;
+auxOther = auxOther->next;
 while (i->prev != NULL && i->n < i->prev->n)
 {
 if(i->next != NULL)

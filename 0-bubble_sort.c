@@ -11,7 +11,7 @@
 
 void bubble_sort(int *array, size_t size)
 {
-size_t tmp, traverse, j;
+size_t tmp, traverse, index;
 
 if (array == NULL || size < 2)
 {
@@ -22,15 +22,15 @@ return;
 for (traverse = 1; traverse < size; traverse++)
 {
 /** loop index the element */
-for (j = 0; j < size - 1; j++)
+for (index = 0; index < size - 1; index++)
 {
 /** freater element */
-if (array[j] > array[j + 1])
+if (array[index] > array[index + 1])
 {
 /** the swap of elements */
-tmp = array[j];
-array[j] = array[j + 1];
-array[j + 1] = tmp;
+tmp = array[index];
+array[index] = array[index + 1];
+array[index + 1] = tmp;
 print_array(array, size);
 }
 }
